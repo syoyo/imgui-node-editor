@@ -71,12 +71,12 @@ static inline int GetKeyIndexForD()
 #else
 static inline int GetKeyIndexForF()
 {
-  return ImGui::GetKeyIndex('F');
+  return 'F';
 }
 
 static inline int GetKeyIndexForD()
 {
-  return ImGui::GetKeyIndex('D');
+  return 'D';
 }
 #endif
 
