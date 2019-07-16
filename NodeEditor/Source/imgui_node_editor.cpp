@@ -55,6 +55,7 @@ namespace Detail {
         }                                                                                           \
     }
 
+#if 0
 DECLARE_KEY_TESTER(ImGuiKey_F);
 DECLARE_KEY_TESTER(ImGuiKey_D);
 
@@ -67,6 +68,17 @@ static inline int GetKeyIndexForD()
 {
     return KeyTester_ImGuiKey_D::Get<ImGuiKey_>(nullptr);
 }
+#else
+static inline int GetKeyIndexForF()
+{
+  return ImGui::GetKeyIndex('F');
+}
+
+static inline int GetKeyIndexForD()
+{
+  return ImGui::GetKeyIndex('D');
+}
+#endif
 
 } // namespace Detail
 } // namespace NodeEditor
